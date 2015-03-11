@@ -2,12 +2,6 @@
 Files for the project assignment in Get and Clean Data Coursera Class
 
 =============================================================================================================
-Please make your reading window wide enough to comfortably read the text in this document. Ideally you should
-be able to see the above entire line of Ò=Ò without breaks. Also, use a non-proportional font to correctly
-visualize the alignment when data is reported directly from R Studio.
-
-
-=============================================================================================================
 How to set up a working directory, download, and unzip data files.
 
 Even if this is not a necessary step in the current configuration, where all the files are in the same directory,
@@ -197,26 +191,4 @@ At the end the function groups the rows of the dataset by Subject and by Activit
         har.sum <- summarise_each(grouped, funs(mean))
         
         return(har.sum)
-
-This is how the result looks like:
-
-   Subject           Activity 1 Time Body Acc mean() X 2 Time Body Acc mean() Y 3 Time Body Acc mean() Z
-1        1             LAYING                0.2215982             -0.040513953               -0.1132036
-2        1            SITTING                0.2612376             -0.001308288               -0.1045442
-3        1           STANDING                0.2789176             -0.016137590               -0.1106018
-4        1            WALKING                0.2773308             -0.017383819               -0.1111481
-5        1 WALKING_DOWNSTAIRS                0.2891883             -0.009918505               -0.1075662
-6        1   WALKING_UPSTAIRS                0.2554617             -0.023953149               -0.0973020
-7        2             LAYING                0.2813734             -0.018158740               -0.1072456
-8        2            SITTING                0.2770874             -0.015687994               -0.1092183
-9        2           STANDING                0.2779115             -0.018420827               -0.1059085
-10       2            WALKING                0.2764266             -0.018594920               -0.1055004
-..     ...                ...                      ...                      ...                      ...
-
-
-
-
-
-
-
 
