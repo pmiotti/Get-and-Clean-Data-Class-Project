@@ -105,7 +105,6 @@ When this is complete, all data frames are converted to a more convenient dplyr 
 In "features.txt" some of the labels results duplicate, this is clear from the following command:
 
 > unique(features.lbl$V2)
-É
 [473] angle(tBodyGyroMean,gravityMean)     angle(tBodyGyroJerkMean,gravityMean)
 [475] angle(X,gravityMean)                 angle(Y,gravityMean)                
 [477] angle(Z,gravityMean)                
