@@ -1,0 +1,71 @@
+=============================================================================================================
+Please make your reading window wide enough to comfortably read the text in this document. Ideally you should
+be able to see the above entire line of “=“ without breaks. Also, use a non-proportional font to correctly
+visualize the alignment when data is reported directly from R Studio.
+
+
+=============================================================================================================
+Code Book for “har.sum.txt”
+
+The following is a sample of the dataset’s content:
+
+   Subject           Activity 1 Time Body Acc mean() X 2 Time Body Acc mean() Y 3 Time Body Acc mean() Z
+1        1             LAYING                0.2215982             -0.040513953               -0.1132036
+2        1            SITTING                0.2612376             -0.001308288               -0.1045442
+3        1           STANDING                0.2789176             -0.016137590               -0.1106018
+4        1            WALKING                0.2773308             -0.017383819               -0.1111481
+5        1 WALKING_DOWNSTAIRS                0.2891883             -0.009918505               -0.1075662
+6        1   WALKING_UPSTAIRS                0.2554617             -0.023953149               -0.0973020
+7        2             LAYING                0.2813734             -0.018158740               -0.1072456
+8        2            SITTING                0.2770874             -0.015687994               -0.1092183
+9        2           STANDING                0.2779115             -0.018420827               -0.1059085
+10       2            WALKING                0.2764266             -0.018594920               -0.1055004
+..     ...                ...                      ...                      ...                      ...
+
+
+ [1] "Subject"         
+ Numeric code identifying the subject (person) of the observations.
+                        
+ [2] “Activity"                               
+ String label reporting the monitored activity, e.g. WALKING, SITTING, …
+
+
+ All remaining columns are observation measures, each label describes the kind of measure, and the 
+ applied function, for example a Time or a Frequency measure, a Body Acceleration measure, and so forth.
+ The label also indicated the function applied: mead() or std() for standard deviation.
+ X,Y, and Z represent the measure axis. The number at the beginning of the label corresponds to the original 
+ sequence if the file “features.txt”.
+                           
+ [3] "1 Time Body Acc mean() X"                "2 Time Body Acc mean() Y"               
+ [5] "3 Time Body Acc mean() Z"                "41 Time Gravity Acc mean() X"           
+ [7] "42 Time Gravity Acc mean() Y"            "43 Time Gravity Acc mean() Z"           
+ [9] "81 Time Body Acc Jerk mean() X"          "82 Time Body Acc Jerk mean() Y"         
+[11] "83 Time Body Acc Jerk mean() Z"          "121 Time Body Gyro mean() X"            
+[13] "122 Time Body Gyro mean() Y"             "123 Time Body Gyro mean() Z"            
+[15] "161 Time Body Gyro Jerk mean() X"        "162 Time Body Gyro Jerk mean() Y"       
+[17] "163 Time Body Gyro Jerk mean() Z"        "201 Time Body Acc Mag mean()"           
+[19] "214 Time Gravity Acc Mag mean()"         "227 Time Body Acc Jerk Mag mean()"      
+[21] "240 Time Body Gyro Mag mean()"           "253 Time Body Gyro Jerk Mag mean()"     
+[23] "266 Freq Body Acc mean() X"              "267 Freq Body Acc mean() Y"             
+[25] "268 Freq Body Acc mean() Z"              "345 Freq Body Acc Jerk mean() X"        
+[27] "346 Freq Body Acc Jerk mean() Y"         "347 Freq Body Acc Jerk mean() Z"        
+[29] "424 Freq Body Gyro mean() X"             "425 Freq Body Gyro mean() Y"            
+[31] "426 Freq Body Gyro mean() Z"             "503 Freq Body Acc Mag mean()"           
+[33] "516 Freq Body Body Acc Jerk Mag mean()"  "529 Freq Body Body Gyro Mag mean()"     
+[35] "542 Freq Body Body Gyro Jerk Mag mean()" "4 Time Body Acc std() X"                
+[37] "5 Time Body Acc std() Y"                 "6 Time Body Acc std() Z"                
+[39] "44 Time Gravity Acc std() X"             "45 Time Gravity Acc std() Y"            
+[41] "46 Time Gravity Acc std() Z"             "84 Time Body Acc Jerk std() X"          
+[43] "85 Time Body Acc Jerk std() Y"           "86 Time Body Acc Jerk std() Z"          
+[45] "124 Time Body Gyro std() X"              "125 Time Body Gyro std() Y"             
+[47] "126 Time Body Gyro std() Z"              "164 Time Body Gyro Jerk std() X"        
+[49] "165 Time Body Gyro Jerk std() Y"         "166 Time Body Gyro Jerk std() Z"        
+[51] "202 Time Body Acc Mag std()"             "215 Time Gravity Acc Mag std()"         
+[53] "228 Time Body Acc Jerk Mag std()"        "241 Time Body Gyro Mag std()"           
+[55] "254 Time Body Gyro Jerk Mag std()"       "269 Freq Body Acc std() X"              
+[57] "270 Freq Body Acc std() Y"               "271 Freq Body Acc std() Z"              
+[59] "348 Freq Body Acc Jerk std() X"          "349 Freq Body Acc Jerk std() Y"         
+[61] "350 Freq Body Acc Jerk std() Z"          "427 Freq Body Gyro std() X"             
+[63] "428 Freq Body Gyro std() Y"              "429 Freq Body Gyro std() Z"             
+[65] "504 Freq Body Acc Mag std()"             "517 Freq Body Body Acc Jerk Mag std()"  
+[67] "530 Freq Body Body Gyro Mag std()"       "543 Freq Body Body Gyro Jerk Mag std()" 
