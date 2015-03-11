@@ -6,7 +6,7 @@ How to set up a working directory, download, and unzip data files.
 
 Even if this is not a necessary step in the current configuration, where all the files are in the same directory,
 this can be useful in preparing a clean execution environment.
-Create an empty directory which will be the home for developing the data elaboration, for example create a dir named Ògetdata.projectÓ, and then switch to that dir, for example:
+Create an empty directory which will be the home for developing the data elaboration, for example create a dir named "getdata.projectÓ, and then switch to that dir, for example:
 
 > setwd("./getdata.project/")
 
@@ -19,7 +19,7 @@ Unzip the file:
 
 > unzip("./dataset.zip")
 
-Now, folder Ò./UCI HAR DatasetÓ contains all the files and sub-dirs needed for the data elaboration.
+Now, folder "./UCI HAR DatasetÓ contains all the files and sub-dirs needed for the data elaboration.
 You can copy files in the base dir if you want to have them all in the same dir, or change the relative path
 in the script to read the datasets from their original location.
 
@@ -55,7 +55,7 @@ Two tables are used to load descriptions for codes used in datasets:
         features.lbl <- read.table("./features.txt")
         activity.lbl <- read.table("./activity_labels.txt")
 
-Òfeatures.lblÓ defines descriptive labels for the 561 columns of the X tables (X_test.txt, X_train.txt):
+"features.lblÓ defines descriptive labels for the 561 columns of the X tables (X_test.txt, X_train.txt):
 
 > head(features.lbl)
   V1                V2
@@ -66,7 +66,7 @@ Two tables are used to load descriptions for codes used in datasets:
 5  5  tBodyAcc-std()-Y
 6  6  tBodyAcc-std()-Z
 
-Òactivity.lblÓ decodes activity codes into activity description:
+"activity.lblÓ decodes activity codes into activity description:
 
 > head(activity.lbl)
   V1                 V2
@@ -77,7 +77,7 @@ Two tables are used to load descriptions for codes used in datasets:
 5  5           STANDING
 6  6             LAYING
 
-The script continues loading all of the ÒtestÓ and ÒtrainingÓ datasets:
+The script continues loading all of the "testÓ and "trainingÓ datasets:
 
         # load subjects, features, and activities for both test and train directories
         x.test <- read.table("./X_test.txt")
@@ -102,7 +102,7 @@ When this is complete, all data frames are converted to a more convenient dplyr 
         y.tbl <- tbl_df(y)
         s.tbl <- tbl_df(s)
         
-In Òfeatures.txtÓ some of the labels results duplicate, this is clear from the following command:
+In "features.txtÓ some of the labels results duplicate, this is clear from the following command:
 
 > unique(features.lbl$V2)
 É
@@ -174,7 +174,7 @@ label:
         # rename column V2 to the decriptive name "Activity"
         j.y.tbl <- select(j.y.tbl, setNames(V2, "Activity"))
         
-In table s.tbl, with the list of Subjects, column V1 is renamed as ÒSubjectÓ:
+In table s.tbl, with the list of Subjects, column V1 is renamed as "SubjectÓ:
 
         # rename column V1 to the descriptive "Subject" in table s.tbl
         s.tbl <- select(s.tbl, setNames(V1, "Subject"))
